@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Russell Keith-Magee
+# This file is distributed under the same license as the BeeWare package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BeeWare 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 20:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../tutorial/tutorial-0.rst:3
+msgid "Tutorial 0 - Let's get set up!"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:5
+msgid ""
+"Before we build our first BeeWare app, we have to make sure we've got all"
+" the prerequisites for running BeeWare."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:9
+msgid "Install Python"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:11
+msgid ""
+"The first thing we'll need is a working Python interpreter, running "
+"Python 3.7 or newer."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:16 ../../tutorial/tutorial-0.rst:67
+#: ../../tutorial/tutorial-0.rst:153
+msgid "macOS"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:18
+msgid ""
+"If you're on macOS, you can get the official installer from `the Python "
+"website <https://www.python.org/downloads>`_. You can use any stable "
+"version of Python from 3.7 onward. We'd advise avoiding alphas, betas, "
+"and release candidates unless you *really* know what you're doing."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:23 ../../tutorial/tutorial-0.rst:78
+#: ../../tutorial/tutorial-0.rst:162
+msgid "Linux"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:25
+msgid ""
+"If you're on Linux, you'll install Python using the system package "
+"manager (``apt`` on Debian/Ubuntu/Mint; ``dnf`` on Fedora, or ``pacman`` "
+"on Arch)."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:28
+msgid ""
+"You should ensure that the system Python is Python 3.7 or newer; if it "
+"isn't (e.g., Ubuntu 18.04 ships with Python 3.6), you may need to use an "
+"alternate source for Python (e.g., the `deadsnakes PPA "
+"<https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa>`__ on Ubuntu)."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:33
+msgid "We don't support Raspberry Pi at this time."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:35 ../../tutorial/tutorial-0.rst:129
+#: ../../tutorial/tutorial-0.rst:171
+msgid "Windows"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:37
+msgid ""
+"If you're on Windows, you can get the official installer from `the Python"
+" website <https://www.python.org/downloads>`_. You can use any stable "
+"version of Python from 3.7 onward. We'd advise avoiding alphas, betas and"
+" release candidates unless you *really* know what you're doing."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:42
+msgid "Alternative Python distributions"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:44
+msgid ""
+"There are lots of different ways of installing Python. You can install "
+"Python through `homebrew <https://docs.brew.sh/Homebrew-and-Python>`__. "
+"You can use `pyenv <https://github.com/pyenv/pyenv#simple-python-version-"
+"management-pyenv>`__ to manage multiple Python installs on the same "
+"machine. Windows users can install Python from the Windows App Store. "
+"Users from a data science background might want to use `Anaconda "
+"<https://docs.anaconda.com/anaconda/install/>`__ or `Miniconda "
+"<https://docs.conda.io/en/latest/miniconda.html>`__."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:54
+msgid ""
+"It doesn't matter *how* you've installed Python - it only matters that "
+"you can run `python3` from your operating system's command "
+"prompt/terminal application, and get a working Python interpreter."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:61
+msgid "Install dependencies"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:63
+msgid ""
+"Next, install the additional dependencies needed for your operating "
+"system:"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:69
+msgid "Building BeeWare apps on macOS require:"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:71
+msgid ""
+"**Git**, a version control system. You can download Git from `git-scm.org"
+" <https://git-scm.com/download/>`__."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:74
+msgid ""
+"**Xcode**, Apple's IDE tooling. Xcode is available for free from `the "
+"macOS App Store "
+"<https://apps.apple.com/au/app/xcode/id497799835?mt=12>`__."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:80
+msgid ""
+"To support local development, you'll need to install some system "
+"packages. The list of packages required varies depending on your "
+"distribution:"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:83
+msgid "**Ubuntu 16.04 / Debian 9**"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:90
+msgid "**Ubuntu 18.04, 20.04 / Debian 10, 11**"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:97
+msgid "**Fedora**"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:103
+msgid "**Arch, Manjaro**"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:109
+msgid ""
+"Briefcase also uses a tool called AppImage to build binaries that can be "
+"used across Linux distributions. However, building AppImage binaries for "
+"Linux is complicated, because of the inconsistent library versions "
+"present on each distribution. Briefcase uses Docker to provide a well-"
+"controlled binary environment for hosting AppImage builds."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:115
+msgid ""
+"Official installers for `Docker Engine "
+"<https://docs.docker.com/engine/install/#server>`__ are availble for a "
+"range of Unix distributions. Follow the instructions for your platform. "
+"Once you've installed Docker, you should be able to start an Ubuntu 18.04"
+" container:"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:125
+msgid ""
+"This should show you a Unix prompt (something like "
+"`root@84444e31cff9:/#`) inside your Docker container. Type Ctrl-D to exit"
+" Docker and return to your local shell."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:131
+msgid "Building BeeWare apps on Windows requires:"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:133
+msgid ""
+"**Git**, a version control system. You can download Git from from `git-"
+"scm.org <https://git-scm.com/download/>`__."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:136
+msgid ""
+"After installing these tools, you should ensure you restart any terminal "
+"sessions. Windows will only expose newly installed tools terminals "
+"started *after* the install has completed."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:141
+msgid "Set up a virtual environment"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:143
+msgid ""
+"We're now going to create a virtual environment - a \"sandbox\" that we "
+"can use to isolate our work on this tutorial from our main Python "
+"installation. If we install packages into the virtual environment, our "
+"main Python installation (and any other Python projects on our computer) "
+"won't be affected. If we make a complete mess of our virtual environment,"
+" we'll be able to simply delete it and start again, without affecting any"
+" other Python project on our computer, and without the need to re-install"
+" Python."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:180
+msgid ""
+"If this worked, your prompt should now be changed - it should have a "
+"``(beeware-venv)`` prefix. This lets you know that you're currently in "
+"your BeeWare virtual environment. Whenever you're working on this "
+"tutorial, you should make sure your virtual environment is activated. If "
+"it isn't, re-run the last command (the ``activate`` command) to re-"
+"activate your environment."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:186
+msgid "Alternative virtual environments"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:188
+msgid ""
+"If you're using Anaconda or miniconda, you may be more familiar with "
+"using conda environments. You might also have heard of ``virtualenv``, a "
+"predecessor to Python's built in ``venv`` module. As with Python installs"
+" - it doesn't matter *how* you create your virtual environment, as long "
+"as you have one."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:194
+msgid ""
+"Even then - strictly speaking, using a virtual environment is optional. "
+"You *can* install BeeWare's tools directly into your main Python "
+"environment. However, it's really, *really*, **really** recommended that "
+"you use a virtual environment."
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:200
+msgid "Next steps"
+msgstr ""
+
+#: ../../tutorial/tutorial-0.rst:202
+msgid ""
+"We've now set up our environment. We're ready to :doc:`create our first "
+"BeeWare application <tutorial-1>`."
+msgstr ""
+

@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Russell Keith-Magee
+# This file is distributed under the same license as the BeeWare package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BeeWare 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 20:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../index.rst:3
+msgid "BeeWare"
+msgstr ""
+
+#: ../../index.rst:5
+msgid "**Write Python. Run Anywhere.**"
+msgstr ""
+
+#: ../../index.rst:7
+msgid ""
+"BeeWare is a suite of tools and libraries, each of which works together "
+"to help you write cross platform native GUI Python applications. It "
+"includes:"
+msgstr ""
+
+#: ../../index.rst:10
+msgid "`Toga <https://toga.readthedocs.io>`__, a cross platform widget toolkit;"
+msgstr ""
+
+#: ../../index.rst:11
+msgid ""
+"`Briefcase <https://briefcase.readthedocs.io>`__, a tool for packaging "
+"Python projects as distributable artefacts that can be shipped to end "
+"users;"
+msgstr ""
+
+#: ../../index.rst:13
+msgid ""
+"`Rubicon ObjC <https://rubicon-objc.readthedocs.io>`__, a library for "
+"working with Objective C libraries on iOS and macOS from within Python "
+"code;"
+msgstr ""
+
+#: ../../index.rst:15
+msgid ""
+"`Rubicon Java <https://rubicon-java.readthedocs.io>`__, a library for "
+"working with Java libraries from within Python code;"
+msgstr ""
+
+#: ../../index.rst:17
+msgid ""
+"Pre-compiled builds of Python that can be used on platforms where "
+"official Python installers aren't available."
+msgstr ""
+
+#: ../../index.rst:20
+msgid ""
+"You can use each of the tools in isolation, or you can use all of them as"
+" a suite."
+msgstr ""
+
+#: ../../index.rst:23
+msgid ""
+"The full BeeWare suite also includes `software development tools "
+"<https://beeware.org/project/projects/tools/>`__ and `applications "
+"<https://beeware.org/project/projects/applications/>`__ that have been "
+"written using BeeWare's own libraries."
+msgstr ""
+
+#: ../../index.rst:28
+msgid ""
+"The BeeWare suite is available on macOS, Windows, Linux (using GTK); on "
+"mobile platforms such as Android and iOS; and for the Web. Support for "
+"other platforms (such as set top boxes and watches) is on our long term "
+"roadmap."
+msgstr ""
+
+#: ../../index.rst:32
+msgid "Platform support"
+msgstr ""
+
+#: ../../index.rst:34
+msgid ""
+"The BeeWare suite is a work in progress. Some tools and libraries are "
+"more mature than others, and some platforms have better support than "
+"others. In particular, Web support should be considered experimental "
+"only."
+msgstr ""
+
+#: ../../index.rst:38
+msgid ""
+"Ready to try BeeWare for yourself? :doc:`Let's build a cross platform "
+"application in Python! <tutorial/tutorial-0>`"
+msgstr ""
+

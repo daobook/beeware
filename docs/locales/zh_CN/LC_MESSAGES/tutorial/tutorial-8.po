@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Russell Keith-Magee
+# This file is distributed under the same license as the BeeWare package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BeeWare 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 20:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../tutorial/tutorial-8.rst:3
+msgid "Tutorial 8 - Make this app your own"
+msgstr ""
+
+#: ../../tutorial/tutorial-8.rst:5
+msgid ""
+"So far, our app has used a default \"gray bee\" icon. How do we update "
+"the app to use our own icon?"
+msgstr ""
+
+#: ../../tutorial/tutorial-8.rst:9
+msgid "Adding an icon"
+msgstr ""
+
+#: ../../tutorial/tutorial-8.rst:11
+msgid "**Coming soon**"
+msgstr ""
+
+#: ../../tutorial/tutorial-8.rst:14
+msgid "Next steps"
+msgstr ""
+
+#: ../../tutorial/tutorial-8.rst:16
+msgid ""
+"We've now got an application with a custom icon on our desktop and phone!"
+" Is there anywhere else we can deploy a BeeWare app? Turn to "
+":doc:`Tutorial 9 <tutorial-9>` to find out..."
+msgstr ""
+
