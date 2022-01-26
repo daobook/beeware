@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../tutorial/tutorial-1.rst:3
 msgid "Tutorial 1 - Your first app"
-msgstr ""
+msgstr "教程1 —— 第一个应用"
 
 #: ../../tutorial/tutorial-1.rst:5
 msgid "We're ready to create our first application."
-msgstr ""
+msgstr "我们已经准备好创建我们的第一个应用程序了。"
 
 #: ../../tutorial/tutorial-1.rst:8
 msgid "Install the BeeWare tools"
-msgstr ""
+msgstr "安装 BeeWare 工具"
 
 #: ../../tutorial/tutorial-1.rst:10
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../tutorial/tutorial-1.rst:48
 msgid "Bootstrap a new project"
-msgstr ""
+msgstr "启动新项目"
 
 #: ../../tutorial/tutorial-1.rst:50
 msgid ""
@@ -82,20 +82,23 @@ msgid ""
 "``new`` command to create an application called **Hello World**. Run the "
 "following from your command prompt:"
 msgstr ""
+"让我们开始我们的第一个 BeeWare 项目吧! "
+"我们将使用 Briefcase 的 ``new`` 命令来创建一个名为 **Hello World** 的应用程序。在你的命令提示符下运行以下程序："
 
 #: ../../tutorial/tutorial-1.rst:74
 msgid ""
 "Briefcase will ask us for some details of our new application. For the "
 "purposes of this tutorial, use the following:"
 msgstr ""
+"Briefcase 会要求我们提供一些关于我们的新应用的细节。为了本教程的目的，请使用以下内容："
 
 #: ../../tutorial/tutorial-1.rst:77
 msgid "**Formal Name** - Accept the default value: ``Hello World``."
-msgstr ""
+msgstr "**Formal Name** - 接受默认值：``Hello World``。"
 
 #: ../../tutorial/tutorial-1.rst:79
 msgid "**App Name** - Accept the default value: ``helloworld``."
-msgstr ""
+msgstr "**App Name** - 接受默认值：``helloworld``。"
 
 #: ../../tutorial/tutorial-1.rst:81
 msgid ""
@@ -104,20 +107,24 @@ msgid ""
 "``com.cupcakes`` as the bundle). If you don't own your own domain, accept"
 " the default bundle (``com.example``)."
 msgstr ""
+"**Bundle**  - 如果你拥有自己的域名，按相反的顺序输入该域名。"
+"（例如，如果你拥有的域名是 \"cupcakes.com\"，请输入 ``com.cupcakes`` 作为捆绑的域名）。"
+"如果你没有自己的域名，接受默认的捆绑（`com.example``）。"
 
 #: ../../tutorial/tutorial-1.rst:86
 msgid "**Project Name** - Accept the default value: ``Hello World``."
-msgstr ""
+msgstr "**Project Name** - 接受默认值：``Hello World``。"
 
 #: ../../tutorial/tutorial-1.rst:88
 msgid ""
 "**Description** - Accept the default value (or, if you want to be really "
 "creative, come up with your own description!)"
 msgstr ""
+"**Description** - 接受默认值（或者，如果你想真正有创意，就想出你自己的描述！）。"
 
 #: ../../tutorial/tutorial-1.rst:91
 msgid "**Author** - Enter your own name here."
-msgstr ""
+msgstr "**Author** - 在这里输入你自己的名字。"
 
 #: ../../tutorial/tutorial-1.rst:93
 msgid ""
@@ -125,6 +132,8 @@ msgid ""
 "the configuration file, in help text, and anywhere that an email is "
 "required when submitting the app to an app store."
 msgstr ""
+"**Author's email** - 输入你自己的电子邮件地址。"
+"这将在配置文件、帮助文本中使用，以及在向应用商店提交应用时需要电子邮件的任何地方使用。"
 
 #: ../../tutorial/tutorial-1.rst:97
 msgid ""
@@ -135,6 +144,9 @@ msgid ""
 "exist (for now); it will only be used if you publish your application to "
 "an app store."
 msgstr ""
+"**URL** - 你的申请的登陆页面的 URL。同样，如果你拥有自己的域名，在该域名上输入一个 URL（包括 ``https://``）。"
+"否则，就接受默认的 URL（``https://example.com/helloworld``）。"
+"这个 URL 不需要实际存在（目前）；只有在你将你的应用程序发布到应用商店时才会用到。"
 
 #: ../../tutorial/tutorial-1.rst:103
 msgid ""
@@ -149,6 +161,7 @@ msgid ""
 "**GUI framework** - Accept the default option, Toga (BeeWare's own GUI "
 "toolkit)."
 msgstr ""
+"**GUI framework** - 接受默认选项，Toga（BeeWare自己的GUI工具包）。"
 
 #: ../../tutorial/tutorial-1.rst:111
 msgid ""
@@ -156,6 +169,8 @@ msgid ""
 " followed this tutorial so far, and accepted the defaults as described, "
 "your file system should look something like::"
 msgstr ""
+"然后 Briefcase 将生成一个项目骨架供你使用。"
+"如果你已经按照本教程进行了学习，并接受了所述的默认值，你的文件系统应该是这样的 ::"
 
 #: ../../tutorial/tutorial-1.rst:132
 msgid ""

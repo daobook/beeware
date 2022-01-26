@@ -19,23 +19,25 @@ msgstr ""
 
 #: ../../tutorial/tutorial-0.rst:3
 msgid "Tutorial 0 - Let's get set up!"
-msgstr ""
+msgstr "教程 0 - 开始行动！"
 
 #: ../../tutorial/tutorial-0.rst:5
 msgid ""
 "Before we build our first BeeWare app, we have to make sure we've got all"
 " the prerequisites for running BeeWare."
 msgstr ""
+"在建立第一个 BeeWare 应用程序之前，必须确保已经具备了运行 BeeWare 的所有先决条件。"
 
 #: ../../tutorial/tutorial-0.rst:9
 msgid "Install Python"
-msgstr ""
+msgstr "安装 Python"
 
 #: ../../tutorial/tutorial-0.rst:11
 msgid ""
 "The first thing we'll need is a working Python interpreter, running "
 "Python 3.7 or newer."
 msgstr ""
+"首先需要的是一个工作的 Python 解释器，运行 Python 3.7 或更新版本。"
 
 #: ../../tutorial/tutorial-0.rst:16 ../../tutorial/tutorial-0.rst:67
 #: ../../tutorial/tutorial-0.rst:153
@@ -112,13 +114,14 @@ msgstr ""
 
 #: ../../tutorial/tutorial-0.rst:61
 msgid "Install dependencies"
-msgstr ""
+msgstr "安装依赖"
 
 #: ../../tutorial/tutorial-0.rst:63
 msgid ""
 "Next, install the additional dependencies needed for your operating "
 "system:"
 msgstr ""
+"接下来，安装操作系统所需的额外依赖项："
 
 #: ../../tutorial/tutorial-0.rst:69
 msgid "Building BeeWare apps on macOS require:"
@@ -201,10 +204,11 @@ msgid ""
 "sessions. Windows will only expose newly installed tools terminals "
 "started *after* the install has completed."
 msgstr ""
+"安装这些工具后，你应该确保重新启动任何终端会话。Windows 只有在安装完成后才会显示新安装的工具终端。"
 
 #: ../../tutorial/tutorial-0.rst:141
 msgid "Set up a virtual environment"
-msgstr ""
+msgstr "建立虚拟环境"
 
 #: ../../tutorial/tutorial-0.rst:143
 msgid ""
@@ -217,6 +221,9 @@ msgid ""
 " other Python project on our computer, and without the need to re-install"
 " Python."
 msgstr ""
+"我们现在要创建一个虚拟环境--一个 \"沙盒\"，我们可以用它来把我们在这个教程上的工作与我们的主 Python 安装隔离开来。"
+"如果我们在虚拟环境中安装软件包，我们的主 Python 安装 (以及我们计算机上的任何其它 Python 项目) 将不会受到影响。"
+"如果我们把我们的虚拟环境搞得一团糟，我们将能够简单地删除它并重新开始，而不影响我们计算机上的任何其它 Python 项目，也不需要重新安装 Python。"
 
 #: ../../tutorial/tutorial-0.rst:180
 msgid ""
@@ -227,6 +234,8 @@ msgid ""
 "it isn't, re-run the last command (the ``activate`` command) to re-"
 "activate your environment."
 msgstr ""
+"如果这样做了，你的提示符现在应该改变了--它应该有一个 \"(beeware-venv)\" 的前缀。这让你知道你目前是在 BeeWare 的虚拟环境中。"
+"无论何时，当你在本教程中工作时，你应该确保你的虚拟环境被激活。如果没有，请重新运行最后一条命令（``activate`` 命令）来重新激活你的环境。"
 
 #: ../../tutorial/tutorial-0.rst:186
 msgid "Alternative virtual environments"

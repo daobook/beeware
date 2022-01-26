@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../index.rst:5
 msgid "**Write Python. Run Anywhere.**"
-msgstr ""
+msgstr "**编写 Python。在任何地方运行。**"
 
 #: ../../index.rst:7
 msgid ""
@@ -31,10 +31,11 @@ msgid ""
 "to help you write cross platform native GUI Python applications. It "
 "includes:"
 msgstr ""
+"BeeWare 是一套工具和库，每一个都能帮助你编写跨平台的本地 GUI Python 应用程序。它包括："
 
 #: ../../index.rst:10
 msgid "`Toga <https://toga.readthedocs.io>`__, a cross platform widget toolkit;"
-msgstr ""
+msgstr "`Toga <https://toga.readthedocs.io>`__，一个跨平台的小部件工具包；"
 
 #: ../../index.rst:11
 msgid ""
@@ -42,6 +43,7 @@ msgid ""
 "Python projects as distributable artefacts that can be shipped to end "
 "users;"
 msgstr ""
+"`Briefcase <https://briefcase.readthedocs.io>`__，将 Python 项目打包成可分发的人工制品的工具，可以运送给终端用户；"
 
 #: ../../index.rst:13
 msgid ""
@@ -61,12 +63,14 @@ msgid ""
 "Pre-compiled builds of Python that can be used on platforms where "
 "official Python installers aren't available."
 msgstr ""
+"预先编译好的 Python 构建，可以在没有官方 Python 安装程序的平台上使用。"
 
 #: ../../index.rst:20
 msgid ""
 "You can use each of the tools in isolation, or you can use all of them as"
 " a suite."
 msgstr ""
+"你可以孤立地使用每一个工具，也可以把它们作为一个套件来使用。"
 
 #: ../../index.rst:23
 msgid ""
@@ -75,6 +79,8 @@ msgid ""
 "<https://beeware.org/project/projects/applications/>`__ that have been "
 "written using BeeWare's own libraries."
 msgstr ""
+"完整的 BeeWare 套件还包括 `软件开发工具 <https://beeware.org/project/projects/tools/>`__ "
+"和 `应用程序 <https://beeware.org/project/projects/applications/>`__，这些都是使用 BeeWare 自己的库编写的。"
 
 #: ../../index.rst:28
 msgid ""
@@ -83,10 +89,13 @@ msgid ""
 "other platforms (such as set top boxes and watches) is on our long term "
 "roadmap."
 msgstr ""
+"BeeWare 套件可在 macOS、Windows、Linux（使用 GTK）；"
+"Android 和 iOS 等移动平台上使用；也可用于网络。"
+"对其他平台（如机顶盒和手表）的支持已列入我们的长期路线图。"
 
 #: ../../index.rst:32
 msgid "Platform support"
-msgstr ""
+msgstr "平台支持"
 
 #: ../../index.rst:34
 msgid ""
@@ -95,10 +104,13 @@ msgid ""
 "others. In particular, Web support should be considered experimental "
 "only."
 msgstr ""
+"BeeWare 套件是一项正在进行的工作。"
+"一些工具和库比其他的更成熟，一些平台比其他平台有更好的支持。"
+"特别是，网络支持应该被认为只是试验性的。"
 
 #: ../../index.rst:38
 msgid ""
 "Ready to try BeeWare for yourself? :doc:`Let's build a cross platform "
 "application in Python! <tutorial/tutorial-0>`"
 msgstr ""
-
+"准备好亲自尝试一下 BeeWare 了吗？ :doc:`让我们用 Python 构建一个跨平台的应用程序吧! <tutorial/tutorial-0>`"
