@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial 2 - Making it interesting &mdash; BeeWare 0.3.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Tutorial 3 - Packaging for distribution" href="tutorial-3.html" />
+    <link rel="prev" title="教程1 —— 第一个应用" href="tutorial-1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> BeeWare
+            <img src="../_static/beeware.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial-0.html">教程 0 - 开始行动！</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-1.html">教程1 —— 第一个应用</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial 2 - Making it interesting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-was-generated">What was generated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-some-content-of-our-own">Adding some content of our own</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-3.html">Tutorial 3 - Packaging for distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-4.html">Tutorial 4 - Updating your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-5/index.html">Tutorial 5 - Taking it Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-6.html">Tutorial 6 - Get this (third)-party started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-7.html">Tutorial 7 - Making it Smooooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-8.html">Tutorial 8 - Make this app your own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-9.html">Tutorial 9 - Put it on the web!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-10.html">Tutorial 10 - Publishing your app!</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BeeWare</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tutorial 2 - Making it interesting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorial/tutorial-2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tutorial-2-making-it-interesting">
+<h1>Tutorial 2 - Making it interesting<a class="headerlink" href="#tutorial-2-making-it-interesting" title="永久链接至标题">¶</a></h1>
+<p>In <a class="reference internal" href="tutorial-1.html"><span class="doc">Tutorial 1</span></a>, we generated a stub project that was able
+to run, but we didn’t write any code ourselves. Let’s take a look at what was
+generated for us.</p>
+<div class="section" id="what-was-generated">
+<h2>What was generated<a class="headerlink" href="#what-was-generated" title="永久链接至标题">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">src/helloworld</span></code> directory, you should see 3 files: <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>,
+<code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> and <code class="docutils literal notranslate"><span class="pre">app.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> marks the <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> directory as an importable Python
+module. It is an empty file; the very fact it exists tells the Python
+interpreter that the <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> directory defines a module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> marks the <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> module as a special kind of module -
+an executable module. If you try to run the <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> module using
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">helloworld</span></code>, the <code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> file is where Python will start
+executing. The contents of <code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> is relatively simple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">helloworld.app</span> <span class="kn">import</span> <span class="n">main</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span><span class="o">.</span><span class="n">main_loop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>That is - it imports the <code class="docutils literal notranslate"><span class="pre">main</span></code> method from the helloworld app; and if it’s
+being executed as an entry point, calls the main() method, and starts the
+application’s main loop. The main loop is the way a GUI application listens for
+user input (like mouse clicks and keyboard presses).</p>
+<p>The more interesting file is <code class="docutils literal notranslate"><span class="pre">app.py</span></code> - this contains the logic that creates
+our application window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">toga</span>
+<span class="kn">from</span> <span class="nn">toga.style</span> <span class="kn">import</span> <span class="n">Pack</span>
+<span class="kn">from</span> <span class="nn">toga.style.pack</span> <span class="kn">import</span> <span class="n">COLUMN</span><span class="p">,</span> <span class="n">ROW</span>
+
+<span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">toga</span><span class="o">.</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">main_box</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Box</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">MainWindow</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">formal_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">main_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">HelloWorld</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Let’s go through this line by line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">toga</span>
+<span class="kn">from</span> <span class="nn">toga.style</span> <span class="kn">import</span> <span class="n">Pack</span>
+<span class="kn">from</span> <span class="nn">toga.style.pack</span> <span class="kn">import</span> <span class="n">COLUMN</span><span class="p">,</span> <span class="n">ROW</span>
+</pre></div>
+</div>
+<p>First, we import the <code class="docutils literal notranslate"><span class="pre">toga</span></code> widget toolkit, as well as some style-related
+utility classes and constants. Our code doesn’t use these yet - but we’ll make
+use of them shortly.</p>
+<p>Then, we define a class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">toga</span><span class="o">.</span><span class="n">App</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Each Toga application has a single <code class="docutils literal notranslate"><span class="pre">toga.App</span></code> instance, representing the
+running entity that is the application. The app may end up managing multiple
+windows; but for simple applications, there will be a single main window.</p>
+<p>Next, we define a <code class="docutils literal notranslate"><span class="pre">startup()</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">main_box</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Box</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The first thing the startup method does is to define a main box. Toga’s layout
+scheme behaves similar to HTML. You build an application by constructing a
+collection of boxes, each of which contains other boxes, or actual widgets. You
+then apply styles to these boxes to define how they will consume the available
+window space.</p>
+<p>In this application, we define a single box, but we don’t put anything into it.</p>
+<p>Next, we define a window into which we can put this empty box:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">main_window</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">MainWindow</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">formal_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This creates an instance of a <code class="docutils literal notranslate"><span class="pre">toga.MainWindow</span></code>, which will have a title
+matching the application’s name. A Main Window is a special kind of window in
+Toga - it’s a window that is closely bound to the lifecycle of the app. When
+the Main Window is closed, the application exits. The Main Window is also the
+window that has the application’s menu (if you’re on a platform like Windows
+where menu bars are part of the window)</p>
+<p>We then add our empty box as the content of the main window, and instruct the
+application to show our window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">main_box</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Last of all, we define a <code class="docutils literal notranslate"><span class="pre">main()</span></code> method. This is what creates the instance
+of our application:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">HelloWorld</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This <code class="docutils literal notranslate"><span class="pre">main()</span></code> method is the one that is imported and invoked by
+<code class="docutils literal notranslate"><span class="pre">__main__.py</span></code>. It creates and returns an instance of our <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code>
+application.</p>
+<p>That’s the simplest possible Toga application. Let’s put some of our own
+content into the application, and make the app do something interesting.</p>
+</div>
+<div class="section" id="adding-some-content-of-our-own">
+<h2>Adding some content of our own<a class="headerlink" href="#adding-some-content-of-our-own" title="永久链接至标题">¶</a></h2>
+<p>Modify your <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code> class inside <code class="docutils literal notranslate"><span class="pre">src/helloworld/app.py</span></code> so that it
+looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">toga</span><span class="o">.</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">main_box</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="n">COLUMN</span><span class="p">))</span>
+
+        <span class="n">name_label</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span>
+            <span class="s1">&#39;Your name: &#39;</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_input</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">flex</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+        <span class="n">name_box</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="n">ROW</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+        <span class="n">name_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name_label</span><span class="p">)</span>
+        <span class="n">name_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name_input</span><span class="p">)</span>
+
+        <span class="n">button</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+            <span class="s1">&#39;Say Hello!&#39;</span><span class="p">,</span>
+            <span class="n">on_press</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">say_hello</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">main_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name_box</span><span class="p">)</span>
+        <span class="n">main_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">MainWindow</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">formal_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">main_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_input</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Don’t remove the imports at the top of the file , or the <code class="docutils literal notranslate"><span class="pre">main()</span></code> at the
+bottom. You only need to update the <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code> class.</p>
+</div>
+<p>Let’s look in detail at what has changed.</p>
+<p>We’re still creating a main box; however, we are now applying a style:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">main_box</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="n">COLUMN</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Toga’s builtin layout system is called “Pack”. It behaves a lot like CSS. You
+define objects in a hierarchy - in HTML, the objects are <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code>,
+and other DOM elements; in Toga, they’re widgets and boxes. You can then assign
+styles to the individual elements. In this case, we’re indicating that this is
+a <code class="docutils literal notranslate"><span class="pre">COLUMN</span></code> box - that is, it is a box that will consume all the available
+width, and will expand its height as content is added, but it will try to be
+as short as possible.</p>
+<p>Next, we define a couple of widgets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_label</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span>
+    <span class="s1">&#39;Your name: &#39;</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">name_input</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">flex</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Here, we define a Label and a TextInput. Both widgets have styles associated
+with them; the label will have 5px of padding on its left and right, and no
+padding on the top and bottom. The TextInput is marked as being flexible - that
+is, it will absorb all available space in its layout axis.</p>
+<p>The TextInput is assigned as an instance variable of the class. This gives us
+easy access to the widget instance - something that we’ll use in a moment.</p>
+<p>Next, we define a box to hold these two widgets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_box</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="n">ROW</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">name_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name_label</span><span class="p">)</span>
+<span class="n">name_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name_input</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">name_box</span></code> is a box just like the main box; however, this time, it’s a
+<code class="docutils literal notranslate"><span class="pre">ROW</span></code> box. That means content will be added horizontally, and it will try
+to make its width as narrow as possible. The box also has some padding - 5px
+on all sides.</p>
+<p>Now we define a button:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">button</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+    <span class="s1">&#39;Say Hello!&#39;</span><span class="p">,</span>
+    <span class="n">on_press</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">say_hello</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="n">Pack</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The button also has 5px of padding on all sides. We also define a <em>handler</em> -
+a method to invoke when the button is pressed.</p>
+<p>Then, we add the name box and the button to the main box:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">main_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name_box</span><span class="p">)</span>
+<span class="n">main_box</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This completes our layout; the rest of the startup method is as it was
+previously - defining a MainWindow, and assigning the main box as the window’s
+content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">main_window</span> <span class="o">=</span> <span class="n">toga</span><span class="o">.</span><span class="n">MainWindow</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">formal_name</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">main_box</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The last thing we need to do is define the handler for the button. A handler
+can be any method, generator, or asynchronous co-routine; it accepts the widget
+that generated the event as an argument, and will be invoked whenever the
+button is pressed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_input</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The body of the method is a simple print statement - however, it will
+interrogate the current value of the name input, and use that content as the
+text that is printed.</p>
+<p>Now that we’ve made these changes we can see what they look like by starting
+the application again. As before, we’ll use Developer mode:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-0-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ briefcase dev
+
+<span class="o">[</span>helloworld<span class="o">]</span> Starting <span class="k">in</span> dev mode...
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ briefcase dev
+
+<span class="o">[</span>helloworld<span class="o">]</span> Starting <span class="k">in</span> dev mode...
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(beeware-venv)</span> <span class="gp">C:\...&gt;</span>briefcase dev
+
+<span class="go">[helloworld] Starting in dev mode...</span>
+</pre></div>
+</div>
+</div></div>
+<p>You’ll notice that this time, it <em>doesn’t</em> install dependencies. Briefcase can
+detect that the application has been run before, and to save time, will only
+run the application. If you add new dependencies to your app, you can make
+sure that they’re installed by passing in a <code class="docutils literal notranslate"><span class="pre">-d</span></code> option when you run
+<code class="docutils literal notranslate"><span class="pre">briefcase</span> <span class="pre">dev</span></code>.</p>
+<p>This should open a GUI window:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-1-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-1-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><img alt="Hello World Tutorial 2 window, on macOS" src="../_images/tutorial-2.png" />
+</div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><img alt="Hello World Tutorial 2 window, on Linux" src="../_images/tutorial-21.png" />
+</div><div aria-labelledby="tab-1-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><img alt="Hello World Tutorial 2 window, on Windows" src="../_images/tutorial-22.png" />
+</div></div>
+<p>If you enter a name in the text box, and press the GUI button, you should see
+output appear in the console where you started the application.</p>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="永久链接至标题">¶</a></h2>
+<p>We’ve now got an application that does something a little more interesting. But
+it only runs on our own computer. Let’s package this application for
+distribution. In <a class="reference internal" href="tutorial-3.html"><span class="doc">Tutorial 3</span></a>, we’ll wrap our application up
+as a standalone installer that we could send to a friend, a customer, or upload
+to an App Store.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorial-1.html" class="btn btn-neutral float-left" title="教程1 —— 第一个应用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial-3.html" class="btn btn-neutral float-right" title="Tutorial 3 - Packaging for distribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2013, Russell Keith-Magee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

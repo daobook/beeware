@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial 7 - Making it Smooooth &mdash; BeeWare 0.3.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Tutorial 8 - Make this app your own" href="tutorial-8.html" />
+    <link rel="prev" title="Tutorial 6 - Get this (third)-party started" href="tutorial-6.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> BeeWare
+            <img src="../_static/beeware.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial-0.html">教程 0 - 开始行动！</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-1.html">教程1 —— 第一个应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-2.html">Tutorial 2 - Making it interesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-3.html">Tutorial 3 - Packaging for distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-4.html">Tutorial 4 - Updating your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-5/index.html">Tutorial 5 - Taking it Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-6.html">Tutorial 6 - Get this (third)-party started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial 7 - Making it Smooooth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gui-event-loops">GUI Event Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#asynchronous-programming">Asynchronous programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-the-tutorial-asynchronous">Making the tutorial Asynchronous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-8.html">Tutorial 8 - Make this app your own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-9.html">Tutorial 9 - Put it on the web!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-10.html">Tutorial 10 - Publishing your app!</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BeeWare</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tutorial 7 - Making it Smooooth</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorial/tutorial-7.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tutorial-7-making-it-smooooth">
+<h1>Tutorial 7 - Making it Smooooth<a class="headerlink" href="#tutorial-7-making-it-smooooth" title="永久链接至标题">¶</a></h1>
+<p>Unless you’ve got a <em>really</em> fast internet connection, you may notice that when
+you press the button, the GUI for your app locks up for a little bit. This is
+because the web request we have made is <em>synchronous</em>. When our application makes
+the web request, it waits for the API to return a response before continuing.
+While it’s waiting, it <em>isn’t</em> allowing the application to redraw - and as a
+result, the application locks up.</p>
+<div class="section" id="gui-event-loops">
+<h2>GUI Event Loops<a class="headerlink" href="#gui-event-loops" title="永久链接至标题">¶</a></h2>
+<p>To understand why this happens, we need to dig into the details of how a GUI
+application works. The specifics vary depending on the platform; but the high
+level concepts are the same, no matter the platform or GUI environment you’re
+using.</p>
+<p>A GUI app is, fundamentally, a single loop that looks something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">quit_requested</span><span class="p">():</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">process_events</span><span class="p">()</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">redraw</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This loop is called the <em>Event Loop</em>. (These aren’t actual method names - it’s
+an illustration of what is going on in “pseudo-code”).</p>
+<p>When you click on a button, or drag a scroll bar, or type a key, you are
+generating an “event”. That “event” is put onto a queue, and the app will
+process the queue of events when it next has the opportunity to do so. The user
+code that is triggered in response to the event is called an <em>event handler</em>.
+These event handlers are invoked as part of the <code class="docutils literal notranslate"><span class="pre">process_events()</span></code> call.</p>
+<p>Once an app has processed all the available events, it will <code class="docutils literal notranslate"><span class="pre">redraw()</span></code> the
+GUI. This takes into account any changes that the events have caused to the
+display of the app, as well as anything else that is going on in the operating
+system - for example, the windows of another app may obscure or reveal
+part of our app’s window, and our app’s redraw will need to reflect the portion
+of the window that is currently visible.</p>
+<p>The important detail to notice: while an application is processing an event, <em>it
+can’t redraw</em>, and <em>it can’t process other events</em>.</p>
+<p>This means any user logic contained in an event handler needs to complete
+quickly. Any delay in completing the event handler will be observed by the user
+as a slowdown (or stop) in GUI updates. If this delay is long enough, your
+operating system may report this as a problem - the macOS “Beachball” and
+Windows “Hourglass” are the operating system telling you that your app is taking
+too long in an event handler.</p>
+<p>Simple operations like “update a label”, or “recompute the total of the inputs”
+are easy to complete quickly. However, there are a lot of operations that can’t
+be completed quickly. If you’re performing a complex mathematical calculation,
+or indexing all the files on a file system, or performing a large network
+request, you can’t “just do it quickly” - the operations are inherently slow.</p>
+<p>So - how do we perform long-lived operations in a GUI application?</p>
+</div>
+<div class="section" id="asynchronous-programming">
+<h2>Asynchronous programming<a class="headerlink" href="#asynchronous-programming" title="永久链接至标题">¶</a></h2>
+<p>What we need is a way to tell an app in the middle of a long-lived event handler
+that it is OK to temporarily release control back to the event loop, as long as
+we can resume where we left off. It’s up to the app to determine when this
+release can occur; but if the app releases control to the event loop regularly,
+we can have a long-running event handler <em>and</em> maintain a responsive UI.</p>
+<p>We can do this by using <em>asynchronous programming</em>. Asynchronous programming is
+a way to describe a program that allows the interpreter to run multiple
+functions a the same time, sharing resources between all the concurrently running
+functions.</p>
+<p>Asynchronous functions (known as <em>co-routines</em>) need to explicitly declared as
+being asynchronous. They also need to internally declare when an opportunity
+exists to change context to another co-routine.</p>
+<p>In Python, asynchronous programming is implemented using the <code class="docutils literal notranslate"><span class="pre">async</span></code> and
+<code class="docutils literal notranslate"><span class="pre">await</span></code> keywords, and the <a class="reference external" href="https://docs.python.org/3/library/asyncio.html">asyncio</a> module in the standard
+library. The <code class="docutils literal notranslate"><span class="pre">async</span></code> keyword allows us to declare that a function is an
+asynchronous co-routine. The <code class="docutils literal notranslate"><span class="pre">await</span></code> keyword provides a way to declare when an
+opportunity exists to change context to another co-routine. The <a class="reference external" href="https://docs.python.org/3/library/asyncio.html">asyncio</a> module provides some other
+useful tools and primitives for asynchronous coding.</p>
+</div>
+<div class="section" id="making-the-tutorial-asynchronous">
+<h2>Making the tutorial Asynchronous<a class="headerlink" href="#making-the-tutorial-asynchronous" title="永久链接至标题">¶</a></h2>
+<p>To make our tutorial asynchronous, modify the <code class="docutils literal notranslate"><span class="pre">say_hello()</span></code> event handler so
+it looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_input</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_input</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;stranger&#39;</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/posts/42&quot;</span><span class="p">)</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">info_dialog</span><span class="p">(</span>
+        <span class="s2">&quot;Hello, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span>
+        <span class="n">payload</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>There are only 4 changes in this code from the previous version:</p>
+<ol class="arabic simple">
+<li><p>The method is defined as <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code>, rather than just <code class="docutils literal notranslate"><span class="pre">def</span></code>. This tells
+Python that the method is an asynchronous co-routine.</p></li>
+<li><p>The client that is created is an asynchronous <code class="docutils literal notranslate"><span class="pre">AsyncClient()</span></code>, rather than a
+synchronous <code class="docutils literal notranslate"><span class="pre">Client()</span></code>. This tells <code class="docutils literal notranslate"><span class="pre">httpx</span></code> that it should operate in
+asynchronous mode, rather than synchronous mode.</p></li>
+<li><p>The context manager used to create the client is marked as <cite>async</cite>. This tells
+Python that there is an opportunity to release control as the context manager
+is entered and exited.</p></li>
+<li><p>The <cite>get</cite> call is made with an <cite>await</cite> keyword. This instructs the app that
+while we are waiting for the response from the network, the app can release control
+to the event loop.</p></li>
+</ol>
+<p>Toga allows you to use regular methods or asynchronous co-routines as handlers;
+Toga manages everything behind the scenes to make sure the handler is invoked
+or awaited as required.</p>
+<p>If you save these changes and re-run the app (either with <code class="docutils literal notranslate"><span class="pre">briefcase</span> <span class="pre">dev</span></code> in
+development mode, or by updating and re-running the packaged app), there won’t
+be any obvious changes to the app. However, when you click on the button to
+trigger the dialog, you may notice a number of subtle improvements:</p>
+<ul class="simple">
+<li><p>The button returns to an “unclicked” state, rather than being stuck in a
+“clicked” state.</p></li>
+<li><p>The “beachball”/”hourglass” icon won’t appear</p></li>
+<li><p>If you move/resize the app window while waiting for the dialog to appear,
+the window will redraw.</p></li>
+<li><p>If you try to open an app menu, the menu will appear immediately.</p></li>
+</ul>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="永久链接至标题">¶</a></h2>
+<p>We’ve now got an application that is slick and responsive, even when it’s
+waiting on a slow API. But it still looks like a tutorial app. Is there anything
+we can do about that? Turn to <a class="reference internal" href="tutorial-8.html"><span class="doc">Tutorial 8</span></a> to find out…</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorial-6.html" class="btn btn-neutral float-left" title="Tutorial 6 - Get this (third)-party started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial-8.html" class="btn btn-neutral float-right" title="Tutorial 8 - Make this app your own" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2013, Russell Keith-Magee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>教程1 —— 第一个应用 &mdash; BeeWare 0.3.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Tutorial 2 - Making it interesting" href="tutorial-2.html" />
+    <link rel="prev" title="教程 0 - 开始行动！" href="tutorial-0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> BeeWare
+            <img src="../_static/beeware.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial-0.html">教程 0 - 开始行动！</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">教程1 —— 第一个应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-beeware-tools">安装 BeeWare 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bootstrap-a-new-project">启动新项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-app-in-developer-mode">Run the app in developer mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-2.html">Tutorial 2 - Making it interesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-3.html">Tutorial 3 - Packaging for distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-4.html">Tutorial 4 - Updating your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-5/index.html">Tutorial 5 - Taking it Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-6.html">Tutorial 6 - Get this (third)-party started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-7.html">Tutorial 7 - Making it Smooooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-8.html">Tutorial 8 - Make this app your own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-9.html">Tutorial 9 - Put it on the web!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-10.html">Tutorial 10 - Publishing your app!</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BeeWare</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>教程1 —— 第一个应用</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorial/tutorial-1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tutorial-1-your-first-app">
+<h1>教程1 —— 第一个应用<a class="headerlink" href="#tutorial-1-your-first-app" title="永久链接至标题">¶</a></h1>
+<p>我们已经准备好创建我们的第一个应用程序了。</p>
+<div class="section" id="install-the-beeware-tools">
+<h2>安装 BeeWare 工具<a class="headerlink" href="#install-the-beeware-tools" title="永久链接至标题">¶</a></h2>
+<p>First, we need to install <strong>Briefcase</strong>. Briefcase is a BeeWare tool that can
+be used to package your application for distribution to end users - but it can
+also be used to bootstrap a new project. Make sure you’re in the
+<code class="docutils literal notranslate"><span class="pre">beeware-tutorial</span></code> directory you created in <a class="reference internal" href="tutorial-0.html"><span class="doc">Tutorial 0</span></a>,
+with the <code class="docutils literal notranslate"><span class="pre">beeware-venv</span></code> virtual environment activated, and run:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-0-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ python -m pip install briefcase
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ python -m pip install briefcase
+</pre></div>
+</div>
+<div class="admonition-possible-errors-during-installation admonition">
+<p class="admonition-title">Possible errors during installation</p>
+<p>If you see errors during installation, it’s almost certainly because
+some of the system requirements haven’t been installed. Make sure you
+have <a class="reference internal" href="tutorial-0.html#install-dependencies"><span class="std std-ref">installed all the platform pre-requisistes</span></a>.</p>
+</div>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(beeware-venv)</span><span class="gp">C:\...&gt;</span>python -m pip install briefcase
+</pre></div>
+</div>
+</div></div>
+<p>One of the BeeWare tools is <strong>Briefcase</strong>. Briefcase can be used to package
+your application for distribution to end users - but it can also be used to
+bootstrap a new project.</p>
+</div>
+<div class="section" id="bootstrap-a-new-project">
+<h2>启动新项目<a class="headerlink" href="#bootstrap-a-new-project" title="永久链接至标题">¶</a></h2>
+<p>让我们开始我们的第一个 BeeWare 项目吧! 我们将使用 Briefcase 的 <code class="docutils literal notranslate"><span class="pre">new</span></code> 命令来创建一个名为 <strong>Hello World</strong> 的应用程序。在你的命令提示符下运行以下程序：</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-1-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-1-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ briefcase new
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ briefcase new
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(beeware-venv)</span> <span class="gp">C:\...&gt;</span>briefcase new
+</pre></div>
+</div>
+</div></div>
+<p>Briefcase 会要求我们提供一些关于我们的新应用的细节。为了本教程的目的，请使用以下内容：</p>
+<ul class="simple">
+<li><p><strong>Formal Name</strong> - 接受默认值：<code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>。</p></li>
+<li><p><strong>App Name</strong> - 接受默认值：<code class="docutils literal notranslate"><span class="pre">helloworld</span></code>。</p></li>
+<li><p><strong>Bundle</strong>  - 如果你拥有自己的域名，按相反的顺序输入该域名。（例如，如果你拥有的域名是 “cupcakes.com”，请输入 <code class="docutils literal notranslate"><span class="pre">com.cupcakes</span></code> 作为捆绑的域名）。如果你没有自己的域名，接受默认的捆绑（<cite>com.example`</cite>）。</p></li>
+<li><p><strong>Project Name</strong> - 接受默认值：<code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>。</p></li>
+<li><p><strong>Description</strong> - 接受默认值（或者，如果你想真正有创意，就想出你自己的描述！）。</p></li>
+<li><p><strong>Author</strong> - 在这里输入你自己的名字。</p></li>
+<li><p><strong>Author’s email</strong> - 输入你自己的电子邮件地址。这将在配置文件、帮助文本中使用，以及在向应用商店提交应用时需要电子邮件的任何地方使用。</p></li>
+<li><p><strong>URL</strong> - 你的申请的登陆页面的 URL。同样，如果你拥有自己的域名，在该域名上输入一个 URL（包括 <code class="docutils literal notranslate"><span class="pre">https://</span></code>）。否则，就接受默认的 URL（<code class="docutils literal notranslate"><span class="pre">https://example.com/helloworld</span></code>）。这个 URL 不需要实际存在（目前）；只有在你将你的应用程序发布到应用商店时才会用到。</p></li>
+<li><p><strong>License</strong> - Accept the default license (BSD). This won’t affect
+anything about the operation of the tutorial, though - so if you have
+particularly strong feelings about license choice, feel free to choose
+another license.</p></li>
+<li><p><strong>GUI framework</strong> - 接受默认选项，Toga（BeeWare自己的GUI工具包）。</p></li>
+</ul>
+<p>然后 Briefcase 将生成一个项目骨架供你使用。如果你已经按照本教程进行了学习，并接受了所述的默认值，你的文件系统应该是这样的</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">beeware</span><span class="o">-</span><span class="n">tutorial</span><span class="o">/</span>
+    <span class="n">beeware</span><span class="o">-</span><span class="n">venv</span><span class="o">/</span>
+        <span class="o">...</span>
+    <span class="n">helloworld</span><span class="o">/</span>
+        <span class="n">LICENSE</span>
+        <span class="n">README</span><span class="o">.</span><span class="n">rst</span>
+        <span class="n">pyproject</span><span class="o">.</span><span class="n">toml</span>
+        <span class="n">src</span><span class="o">/</span>
+            <span class="n">helloworld</span><span class="o">/</span>
+                <span class="n">resources</span><span class="o">/</span>
+                    <span class="n">helloworld</span><span class="o">.</span><span class="n">icns</span>
+                    <span class="n">helloworld</span><span class="o">.</span><span class="n">ico</span>
+                    <span class="n">helloworld</span><span class="o">.</span><span class="n">png</span>
+                <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+                <span class="n">__main__</span><span class="o">.</span><span class="n">py</span>
+                <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This skeleton is actually a fully functioning application without adding
+anything else. The <code class="docutils literal notranslate"><span class="pre">src</span></code> folder contains all the code for the application,
+and the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file describes how to package the application for
+distribution. If you open <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> in an editor, you’ll see the
+configuration details you just provided to Briefcase.</p>
+<p>Now that we have a stub application, we can use Briefcase to run the
+application.</p>
+</div>
+<div class="section" id="run-the-app-in-developer-mode">
+<h2>Run the app in developer mode<a class="headerlink" href="#run-the-app-in-developer-mode" title="永久链接至标题">¶</a></h2>
+<p>Move into the <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> project directory and tell briefcase to start
+the project in Developer (or <code class="docutils literal notranslate"><span class="pre">dev</span></code>) mode:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-2-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ <span class="nb">cd</span> helloworld
+<span class="o">(</span>beeware-venv<span class="o">)</span> $ briefcase dev
+
+<span class="o">[</span>hello-world<span class="o">]</span> Installing dependencies...
+...
+<span class="o">[</span>helloworld<span class="o">]</span> Starting <span class="k">in</span> dev mode...
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>beeware-venv<span class="o">)</span> $ <span class="nb">cd</span> helloworld
+<span class="o">(</span>beeware-venv<span class="o">)</span> $ briefcase dev
+
+<span class="o">[</span>hello-world<span class="o">]</span> Installing dependencies...
+...
+<span class="o">[</span>helloworld<span class="o">]</span> Starting <span class="k">in</span> dev mode...
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(beeware-venv)</span> <span class="gp">C:\...&gt;</span><span class="k">cd</span> helloworld
+<span class="gp gp-VirtualEnv">(beeware-venv)</span> <span class="gp">C:\...&gt;</span>briefcase dev
+
+<span class="go">[hello-world] Installing dependencies...</span>
+<span class="go">...</span>
+<span class="go">[helloworld] Starting in dev mode...</span>
+</pre></div>
+</div>
+<div class="admonition-possible-errors-during-installation admonition">
+<p class="admonition-title">Possible errors during installation</p>
+<p>If you’re using a more recent version of Python (3.9+), this step may
+raise an error when installing dependencies. This will usually manifest
+as:</p>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="go">    Traceback (most recent call last):</span>
+<span class="gp">      File &quot;&lt;string&gt;</span><span class="s2">&quot;, line 1, in &lt;module&gt;</span>
+<span class="gp">      File &quot;C:\...\Local\Temp\pip-install-ytuu_37_\pythonnet\setup.py&quot;, line 18, in &lt;module&gt;</span>
+<span class="go">        from wheel import bdist_wheel</span>
+<span class="go">    ModuleNotFoundError: No module named &#39;wheel&#39;</span>
+<span class="go">    ----------------------------------------</span>
+<span class="go">ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<p>Depending on the specifics of your environment, it might also manifest
+as a report that includes the following:</p>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="go">  Building wheel for pythonnet (setup.py) ... error</span>
+<span class="go">  ERROR: Command errored out with exit status 1:</span>
+<span class="go">  ...</span>
+<span class="go">    File &quot;c:\...\Local\Programs\Python\Python38\lib\subprocess.py&quot;, line 364, in check_call</span>
+<span class="go">      raise CalledProcessError(retcode, cmd)</span>
+<span class="go">  subprocess.CalledProcessError: Command &#39;[&#39;...\\python.exe&#39;, &#39;tools\\geninterop\\geninterop.py&#39;, &#39;src\\runtime\\interop38.cs&#39;]&#39; returned non-zero exit status 1.</span>
+<span class="go">  ----------------------------------------</span>
+<span class="go">  ERROR: Failed building wheel for pythonnet</span>
+<span class="go">  Running setup.py clean for pythonnet</span>
+<span class="go">Failed to build pythonnet</span>
+</pre></div>
+</div>
+<p>This is caused because the the tutorial app depends on the <a class="reference external" href="http://pythonnet.github.io/">Python for
+.NET</a> package to access system libraries
+on Windows. Python for .NET isn’t a pure Python package - it contains C#
+modules that need to be compiled. The Python for .NET team publishes
+pre-compiled versions of these modules, but they sometimes lag behind in
+support of more recent versions of Python.</p>
+<p>If you get this error, you have four options:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Use an older version of Python. Check the <a class="reference external" href="https://pypi.org/project/pythonnet/">pythonnet entry on
+PyPI</a> to see the versions
+of Python currently supported by Python for .NET.</p></li>
+<li><p>Install a pre-release version of Python for .NET. The 3.0 release,
+which is currently in alpha testing, is a pure Python package, and
+only requires that the <a class="reference external" href="https://dotnet.microsoft.com/download">.NET 5 SDK</a> is installed on your
+computer. Unfortunately, this option isn’t well documented;
+consult Python for .NET support channels for details.</p></li>
+<li><p>Configure your environment to support compiling Python for .NET.
+This is a moderately complex process, and will require you to have
+Visual Studio. See <a class="reference external" href="https://github.com/pythonnet/pythonnet/wiki/Installation">the Python for .NET wiki</a> for
+details.</p></li>
+<li><p>Install an unofficial compiled wheel. The Python for .NET team
+suggests <a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pythonnet">this collection of wheels</a> as a
+possible source. The <cite>.whl</cite> file can be installed with
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">somefile.whl</span></code>; you should then be able to
+re-run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--pre</span> <span class="pre">beeware</span></code>.</p></li>
+</ol>
+</div></blockquote>
+</div>
+</div></div>
+<p>This should open a GUI window:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-3-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-3-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><img alt="Hello World Tutorial 1 window, on macOS" src="../_images/tutorial-1.png" />
+</div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><img alt="Hello World Tutorial 1 window, on Linux" src="../_images/tutorial-11.png" />
+</div><div aria-labelledby="tab-3-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><img alt="Hello World Tutorial 1 window, on Windows" src="../_images/tutorial-12.png" />
+</div></div>
+<p>Press the close button (or select Quit from the application’s menu), and you’re
+done! Congratulations - you’ve just written a standalone, native application
+in Python!</p>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="永久链接至标题">¶</a></h2>
+<p>We now have a working application, running in developer mode. Now we can add
+some logic of our own to make our application do something a little more
+interesting. In <a class="reference internal" href="tutorial-2.html"><span class="doc">Tutorial 2</span></a>, we’ll put a more useful user
+interface onto our application.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorial-0.html" class="btn btn-neutral float-left" title="教程 0 - 开始行动！" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial-2.html" class="btn btn-neutral float-right" title="Tutorial 2 - Making it interesting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2013, Russell Keith-Magee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

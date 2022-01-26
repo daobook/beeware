@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial 5 - Taking it Mobile &mdash; BeeWare 0.3.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Tutorial 5 - Taking it mobile: iOS" href="iOS.html" />
+    <link rel="prev" title="Tutorial 4 - Updating your application" href="../tutorial-4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> BeeWare
+            <img src="../../_static/beeware.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-0.html">教程 0 - 开始行动！</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-1.html">教程1 —— 第一个应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-2.html">Tutorial 2 - Making it interesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-3.html">Tutorial 3 - Packaging for distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-4.html">Tutorial 4 - Updating your application</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial 5 - Taking it Mobile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ios"><span class="xref std std-doc">iOS</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#android"><span class="xref std std-doc">Android</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iOS.html">Tutorial 5 - Taking it mobile: iOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Tutorial 5 - Taking it mobile: Android</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-6.html">Tutorial 6 - Get this (third)-party started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-7.html">Tutorial 7 - Making it Smooooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-8.html">Tutorial 8 - Make this app your own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-9.html">Tutorial 9 - Put it on the web!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial-10.html">Tutorial 10 - Publishing your app!</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BeeWare</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tutorial 5 - Taking it Mobile</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorial/tutorial-5/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <style>
+    .row {clear: both}
+
+    .column img {border: 1px solid black;}
+
+    @media only screen and (min-width: 1000px),
+           only screen and (min-width: 500px) and (max-width: 768px){
+
+        .column {
+            padding-left: 5px;
+            padding-right: 5px;
+            float: left;
+        }
+
+        .column3  {
+            width: 33.3%;
+        }
+
+        .column2  {
+            width: 50%;
+        }
+    }
+</style><div class="section" id="tutorial-5-taking-it-mobile">
+<h1>Tutorial 5 - Taking it Mobile<a class="headerlink" href="#tutorial-5-taking-it-mobile" title="永久链接至标题">¶</a></h1>
+<p>So far, we’ve been running and testing our application on the desktop. However,
+BeeWare also supports mobile platforms - and the application we’ve written
+can be deployed to your mobile device, too!</p>
+<div class="clearfix row column column2 section" id="ios">
+<h2><a class="reference internal" href="iOS.html"><span class="doc">iOS</span></a><a class="headerlink" href="#ios" title="永久链接至标题">¶</a></h2>
+<p>iOS applications can only be compiled on macOS. You’ll need <a class="reference external" href="https://apps.apple.com/au/app/xcode/id497799835?mt=12">Xcode</a>, which you should
+have installed in <a class="reference internal" href="../tutorial-0.html"><span class="doc">Tutorial 0</span></a>.</p>
+<p>Once you’ve got Xcode installed, <a class="reference internal" href="iOS.html"><span class="doc">let’s build our app for iOS!</span></a></p>
+</div>
+<div class="column column2 section" id="android">
+<h2><a class="reference internal" href="android.html"><span class="doc">Android</span></a><a class="headerlink" href="#android" title="永久链接至标题">¶</a></h2>
+<p>Android applications can be compiled on macOS, Windows or Linux. All the tools
+required to build for Android will be downloaded the first time you build
+an Android app.</p>
+<p><a class="reference internal" href="android.html"><span class="doc">Let’s build our app for Android!</span></a></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tutorial-4.html" class="btn btn-neutral float-left" title="Tutorial 4 - Updating your application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="iOS.html" class="btn btn-neutral float-right" title="Tutorial 5 - Taking it mobile: iOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2013, Russell Keith-Magee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

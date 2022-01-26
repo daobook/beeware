@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>教程 0 - 开始行动！ &mdash; BeeWare 0.3.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="教程1 —— 第一个应用" href="tutorial-1.html" />
+    <link rel="prev" title="BeeWare" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> BeeWare
+            <img src="../_static/beeware.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">教程 0 - 开始行动！</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-python">安装 Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">安装依赖</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-a-virtual-environment">建立虚拟环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-1.html">教程1 —— 第一个应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-2.html">Tutorial 2 - Making it interesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-3.html">Tutorial 3 - Packaging for distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-4.html">Tutorial 4 - Updating your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-5/index.html">Tutorial 5 - Taking it Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-6.html">Tutorial 6 - Get this (third)-party started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-7.html">Tutorial 7 - Making it Smooooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-8.html">Tutorial 8 - Make this app your own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-9.html">Tutorial 9 - Put it on the web!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-10.html">Tutorial 10 - Publishing your app!</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BeeWare</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>教程 0 - 开始行动！</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorial/tutorial-0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tutorial-0-let-s-get-set-up">
+<h1>教程 0 - 开始行动！<a class="headerlink" href="#tutorial-0-let-s-get-set-up" title="永久链接至标题">¶</a></h1>
+<p>在建立第一个 BeeWare 应用程序之前，必须确保已经具备了运行 BeeWare 的所有先决条件。</p>
+<div class="section" id="install-python">
+<h2>安装 Python<a class="headerlink" href="#install-python" title="永久链接至标题">¶</a></h2>
+<p>首先需要的是一个工作的 Python 解释器，运行 Python 3.7 或更新版本。</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-0-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>If you’re on macOS, you can get the official installer from <a class="reference external" href="https://www.python.org/downloads">the Python
+website</a>. You can use any stable version
+of Python from 3.7 onward. We’d advise avoiding alphas, betas, and release
+candidates unless you <em>really</em> know what you’re doing.</p>
+</div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>If you’re on Linux, you’ll install Python using the system package manager
+(<code class="docutils literal notranslate"><span class="pre">apt</span></code> on Debian/Ubuntu/Mint; <code class="docutils literal notranslate"><span class="pre">dnf</span></code> on Fedora, or <code class="docutils literal notranslate"><span class="pre">pacman</span></code> on Arch).</p>
+<p>You should ensure that the system Python is Python 3.7 or newer; if it isn’t
+(e.g., Ubuntu 18.04 ships with Python 3.6), you may need to use an alternate
+source for Python (e.g., the <a class="reference external" href="https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa">deadsnakes PPA</a> on Ubuntu).</p>
+<p>We don’t support Raspberry Pi at this time.</p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>If you’re on Windows, you can get the official installer from <a class="reference external" href="https://www.python.org/downloads">the Python
+website</a>. You can use any stable version
+of Python from 3.7 onward. We’d advise avoiding alphas, betas and release
+candidates unless you <em>really</em> know what you’re doing.</p>
+</div></div>
+<div class="admonition-alternative-python-distributions admonition">
+<p class="admonition-title">Alternative Python distributions</p>
+<p>There are lots of different ways of installing Python. You can install
+Python through <a class="reference external" href="https://docs.brew.sh/Homebrew-and-Python">homebrew</a>. You can use <a class="reference external" href="https://github.com/pyenv/pyenv#simple-python-version-management-pyenv">pyenv</a>
+to manage multiple Python installs on the same machine. Windows users
+can install Python from the Windows App Store. Users from a data science
+background might want to use <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda</a> or <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>.</p>
+<p>It doesn’t matter <em>how</em> you’ve installed Python - it only matters that you
+can run <cite>python3</cite> from your operating system’s command prompt/terminal
+application, and get a working Python interpreter.</p>
+</div>
+</div>
+<div class="section" id="install-dependencies">
+<span id="id2"></span><h2>安装依赖<a class="headerlink" href="#install-dependencies" title="永久链接至标题">¶</a></h2>
+<p>接下来，安装操作系统所需的额外依赖项：</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-1-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-1-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>Building BeeWare apps on macOS require:</p>
+<ul class="simple">
+<li><p><strong>Git</strong>, a version control system. You can download Git from
+<a class="reference external" href="https://git-scm.com/download/">git-scm.org</a>.</p></li>
+<li><p><strong>Xcode</strong>, Apple’s IDE tooling. Xcode is available for free
+from <a class="reference external" href="https://apps.apple.com/au/app/xcode/id497799835?mt=12">the macOS App Store</a>.</p></li>
+</ul>
+</div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>To support local development, you’ll need to install some system packages.
+The list of packages required varies depending on your distribution:</p>
+<p><strong>Ubuntu 16.04 / Debian 9</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install git python3-dev python3-venv python3-gi python3-gi-cairo libgirepository1.0-dev libcairo2-dev libpango1.0-dev libwebkitgtk-3.0-0 gir1.2-webkit2-3.0
+</pre></div>
+</div>
+<p><strong>Ubuntu 18.04, 20.04 / Debian 10, 11</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install git python3-dev python3-venv python3-gi python3-gi-cairo libgirepository1.0-dev libcairo2-dev libpango1.0-dev libwebkit2gtk-4.0-37 gir1.2-webkit2-4.0
+</pre></div>
+</div>
+<p><strong>Fedora</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo dnf install git pkg-config python3-devel gobject-introspection-devel cairo-devel cairo-gobject-devel pango-devel webkitgtk4
+</pre></div>
+</div>
+<p><strong>Arch, Manjaro</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Syu git pkgconf cairo python-cairo pango gobject-introspection gobject-introspection-runtime python-gobject webkit2gtk
+</pre></div>
+</div>
+<p>Briefcase also uses a tool called AppImage to build binaries that can be
+used across Linux distributions. However, building AppImage binaries for
+Linux is complicated, because of the inconsistent library versions present
+on each distribution. Briefcase uses Docker to provide a well-controlled
+binary environment for hosting AppImage builds.</p>
+<p>Official installers for <a class="reference external" href="https://docs.docker.com/engine/install/#server">Docker Engine</a> are availble for a
+range of Unix distributions. Follow the instructions for your platform.
+Once you’ve installed Docker, you should be able to start an Ubuntu 18.04
+container:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run -it ubuntu:18.04
+</pre></div>
+</div>
+<p>This should show you a Unix prompt (something like <cite>root&#64;84444e31cff9:/#</cite>)
+inside your Docker container. Type Ctrl-D to exit Docker and return to your
+local shell.</p>
+</div><div aria-labelledby="tab-1-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>Building BeeWare apps on Windows requires:</p>
+<ul class="simple">
+<li><p><strong>Git</strong>, a version control system. You can download Git from from
+<a class="reference external" href="https://git-scm.com/download/">git-scm.org</a>.</p></li>
+</ul>
+<p>安装这些工具后，你应该确保重新启动任何终端会话。Windows 只有在安装完成后才会显示新安装的工具终端。</p>
+</div></div>
+</div>
+<div class="section" id="set-up-a-virtual-environment">
+<h2>建立虚拟环境<a class="headerlink" href="#set-up-a-virtual-environment" title="永久链接至标题">¶</a></h2>
+<p>我们现在要创建一个虚拟环境–一个 “沙盒”，我们可以用它来把我们在这个教程上的工作与我们的主 Python 安装隔离开来。如果我们在虚拟环境中安装软件包，我们的主 Python 安装 (以及我们计算机上的任何其它 Python 项目) 将不会受到影响。如果我们把我们的虚拟环境搞得一团糟，我们将能够简单地删除它并重新开始，而不影响我们计算机上的任何其它 Python 项目，也不需要重新安装 Python。</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-bWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="0">macOS</button><button aria-controls="panel-2-TGludXg=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="-1">Linux</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir beeware-tutorial
+$ <span class="nb">cd</span> beeware-tutorial
+$ python3 -m venv beeware-venv
+$ <span class="nb">source</span> beeware-venv/bin/activate
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir beeware-tutorial
+$ <span class="nb">cd</span> beeware-tutorial
+$ python3 -m venv beeware-venv
+$ <span class="nb">source</span> beeware-venv/bin/activate
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\...&gt;</span><span class="k">md</span> beeware-tutorial
+<span class="gp">C:\...&gt;</span><span class="k">cd</span> beeware-tutorial
+<span class="gp">C:\...&gt;</span>py -m venv beeware-venv
+<span class="gp">C:\...&gt;</span>beeware-venv\Scripts\activate.bat
+</pre></div>
+</div>
+</div></div>
+<p>如果这样做了，你的提示符现在应该改变了–它应该有一个 “(beeware-venv)” 的前缀。这让你知道你目前是在 BeeWare 的虚拟环境中。无论何时，当你在本教程中工作时，你应该确保你的虚拟环境被激活。如果没有，请重新运行最后一条命令（<code class="docutils literal notranslate"><span class="pre">activate</span></code> 命令）来重新激活你的环境。</p>
+<div class="admonition-alternative-virtual-environments admonition">
+<p class="admonition-title">Alternative virtual environments</p>
+<p>If you’re using Anaconda or miniconda, you may be more familiar with using
+conda environments. You might also have heard of <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>, a
+predecessor to Python’s built in <code class="docutils literal notranslate"><span class="pre">venv</span></code> module. As with Python installs -
+it doesn’t matter <em>how</em> you create your virtual environment, as long as you
+have one.</p>
+<p>Even then - strictly speaking, using a virtual environment is optional. You
+<em>can</em> install BeeWare’s tools directly into your main Python environment.
+However, it’s really, <em>really</em>, <strong>really</strong> recommended that you use a
+virtual environment.</p>
+</div>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="永久链接至标题">¶</a></h2>
+<p>We’ve now set up our environment. We’re ready to <a class="reference internal" href="tutorial-1.html"><span class="doc">create our first BeeWare
+application</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="BeeWare" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial-1.html" class="btn btn-neutral float-right" title="教程1 —— 第一个应用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2013, Russell Keith-Magee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
