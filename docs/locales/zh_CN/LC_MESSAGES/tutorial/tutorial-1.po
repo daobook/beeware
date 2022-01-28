@@ -179,8 +179,11 @@ msgid ""
 "application, and the ``pyproject.toml`` file describes how to package the"
 " application for distribution. If you open ``pyproject.toml`` in an "
 "editor, you'll see the configuration details you just provided to "
-"Briefcase."
+"Briefcase."  
 msgstr ""
+"这个骨架实际上是一个功能齐全的应用程序，不需要添加任何其他东西。"
+"``src`` 文件夹包含了应用程序的所有代码，``pyproject.toml`` 文件描述了如何打包发布应用程序。"
+"如果你在编辑器中打开 ``pyproject.toml``，你会看到你刚刚提供给 Briefcase 的配置细节。"
 
 #: ../../tutorial/tutorial-1.rst:138
 msgid ""
